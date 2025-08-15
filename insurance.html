@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance | Trisharya Finance</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="assets/logo-placeholder.png" alt="Trisharya Finance Logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="mutual-funds.html">Mutual Funds</a></li>
+                    <li><a href="insurance.html" class="active">Insurance</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1>Insurance</h1>
+                <p>Protecting what matters most.</p>
+            </div>
+        </section>
+
+        <section class="service-details">
+            <div class="container">
+                <h2>Our Insurance Solutions</h2>
+                <p>We help you find the right insurance policy to secure your family and your assets against life's uncertainties.</p>
+                <div class="service-grid">
+                    <div class="service-item">
+                        <h3>Life & Term Insurance</h3>
+                        <p>Ensures your family's financial security in your absence. Term plans offer high coverage at affordable premiums.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Health Insurance</h3>
+                        <p>Safeguard your family's health and savings against medical emergencies with a comprehensive health policy.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Motor Insurance</h3>
+                        <p>Protect your car or bike from damage and theft, and cover third-party liabilities as required by law.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Travel Insurance</h3>
+                        <p>Travel with peace of mind. Covers medical emergencies, lost baggage, and trip cancellations abroad.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="calculator-section">
+            <div class="container">
+                <h2>Insurance Coverage Estimator</h2>
+                <p>Use our simple tool to get a rough idea of the ideal insurance coverage you might need.</p>
+                <div class="calculator-form">
+                    <label for="annualIncome">Your Annual Income (₹)</label>
+                    <input type="number" id="annualIncome" value="500000">
+
+                    <label for="dependents">Number of Dependents</label>
+                    <input type="number" id="dependents" value="3">
+                </div>
+                <button onclick="calculateInsurance()" class="btn primary-btn">Estimate Coverage</button>
+                <div id="insuranceResult" class="result-box">
+                    <p>Estimated Coverage Needed: ₹<span id="estimatedCoverage">0</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="container">
+                <h2>Insurance FAQs</h2>
+                <div class="faq-accordion">
+                    <div class="faq-item">
+                        <div class="faq-question">How much health insurance do I need?</div>
+                        <div class="faq-answer">The ideal health cover depends on your family's medical history, your city of residence, and the number of members to be insured. A minimum of ₹5-10 lakhs is often recommended for a family of four.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">What is a Term Plan?</div>
+                        <div class="faq-answer">A term plan is a pure life insurance product that offers a large life cover at a very low premium for a fixed period. It pays out a lump sum to your family if you pass away during the policy term.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Trisharya Finance. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

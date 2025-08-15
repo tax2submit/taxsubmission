@@ -3,146 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tax Submission - Expert Tax Filing & Financial Advice</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Inter Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-    </style>
+    <title>Trisharya Finance - Building Your Financial Future</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body class="bg-gray-50 text-gray-800">
-
-    <!-- Header -->
-    <header class="bg-white shadow-sm p-4 sticky top-0 z-50">
-        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-indigo-700 rounded-lg p-2 hover:bg-indigo-50 transition-colors duration-200">TaxSubmission.com</a>
-            <nav class="mt-4 md:mt-0">
-                <ul class="flex space-x-4">
-                    <li><a href="#home" class="text-gray-600 hover:text-indigo-700 font-medium px-3 py-2 rounded-lg hover:bg-gray-100 transition-colors duration-200">Home</a></li>
-                    <li><a href="#services" class="text-gray-600 hover:text-indigo-700 font-medium px-3 py-2 rounded-lg hover:bg-gray-100 transition-colors duration-200">Services</a></li>
-                    <li><a href="#about" class="text-gray-600 hover:text-indigo-700 font-medium px-3 py-2 rounded-lg hover:bg-gray-100 transition-colors duration-200">About Us</a></li>
-                    <li><a href="#contact" class="text-gray-600 hover:text-indigo-700 font-medium px-3 py-2 rounded-lg hover:bg-gray-100 transition-colors duration-200">Contact</a></li>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="assets/logo-placeholder.png" alt="Trisharya Finance Logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="mutual-funds.html">Mutual Funds</a></li>
+                    <li><a href="insurance.html">Insurance</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section id="home" class="bg-gradient-to-r from-indigo-600 to-purple-700 text-white py-20 px-4 rounded-b-xl shadow-xl">
-            <div class="container mx-auto text-center">
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
-                    Your Trusted Partner for Flawless Tax Filing
-                </h1>
-                <p class="text-lg sm:text-xl mb-8 max-w-2xl mx-auto opacity-90">
-                    Navigate the complexities of tax regulations with confidence. Our dedicated human experts ensure accuracy, compliance, and optimal tax savings.
-                </p>
-                <a href="#contact" class="bg-white text-indigo-700 hover:bg-indigo-100 font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
-                    Get a Free Consultation
-                </a>
+        <section class="hero">
+            <div class="container">
+                <h1>Building Your Financial Future</h1>
+                <p>Your Trusted Partner for Expert Mutual Funds & Insurance Advice.</p>
+                <a href="contact.html" class="btn primary-btn">Get in Touch</a>
             </div>
         </section>
 
-        <!-- Services Section -->
-        <section id="services" class="py-16 px-4 bg-gray-50">
-            <div class="container mx-auto">
-                <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Our Services</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Tax Filing Service -->
-                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
-                        <div class="flex items-center justify-center mb-4 text-indigo-600">
-                            <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M2.928 5.757A.999.999 0 013 6v10c0 .552.447 1 1 1h12c.553 0 1-.448 1-1V6a.999.999 0 01.072-.243l-4.436-4.435A.999.999 0 0012.564 1H6.436a.999.999 0 00-.707.293L2.929 5.757zM5 7v9h10V7H5zm4 2h2v4H9V9z" clip-rule="evenodd"></path></svg>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-4 text-center">Precise Tax Filing</h3>
-                        <p class="text-gray-600 text-center">
-                            Our dedicated team meticulously reviews every document to ensure your tax returns are filed accurately and on time, minimizing errors and maximizing your benefits. We do not use any software or AI for document review or tax filing to avoid any mistakes.
-                        </p>
+        <section class="services-overview">
+            <div class="container">
+                <h2>Our Core Services</h2>
+                <div class="service-cards">
+                    <div class="card">
+                        <img src="assets/mf-icon.png" alt="Mutual Funds Icon">
+                        <h3>Mutual Funds</h3>
+                        <p>Discover personalized investment strategies to help you achieve your financial goals. We offer a wide range of funds, from high-growth equity to stable debt plans.</p>
+                        <a href="mutual-funds.html" class="btn secondary-btn">Explore Funds</a>
                     </div>
-
-                    <!-- Insurance Recommendation Service -->
-                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
-                        <div class="flex items-center justify-center mb-4 text-green-600">
-                            <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-4 text-center">Insurance for Tax Savings</h3>
-                        <p class="text-gray-600 text-center">
-                            Discover tailored insurance plans that not only protect your future but also offer significant tax benefits. Our experts help you choose the right policies.
-                        </p>
-                    </div>
-
-                    <!-- Mutual Funds Recommendation Service -->
-                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
-                        <div class="flex items-center justify-center mb-4 text-yellow-600">
-                            <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM13 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2h-2zM13 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2h-2z"></path></svg>
-                        </div>
-                        <h3 class="text-xl font-semibold text-gray-900 mb-4 text-center">Optimized Mutual Fund Investments</h3>
-                        <p class="text-gray-600 text-center">
-                            Invest wisely with our guidance on mutual funds designed to optimize your tax savings and grow your wealth. We provide personalized investment strategies.
-                        </p>
+                    <div class="card">
+                        <img src="assets/insurance-icon.png" alt="Insurance Icon">
+                        <h3>Insurance</h3>
+                        <p>Secure your life and assets with comprehensive insurance solutions. From health to term plans, we help you find the right coverage to protect what matters most.</p>
+                        <a href="insurance.html" class="btn secondary-btn">Explore Plans</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- About Us Section -->
-        <section id="about" class="py-16 px-4 bg-gray-100">
-            <div class="container mx-auto text-center">
-                <h2 class="text-3xl font-bold text-gray-900 mb-8">About TaxSubmission.com</h2>
-                <p class="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
-                    At TaxSubmission.com, we understand the critical importance of accuracy when it comes to your finances. That's why we stand apart by offering a truly human-centric approach to tax filing and financial optimization. We firmly believe that no algorithm or AI can replicate the nuanced understanding, critical review, and personalized advice that a dedicated human expert provides.
-                </p>
-                <p class="text-lg text-gray-700 max-w-3xl mx-auto mt-4 leading-relaxed">
-                    Our team of experienced professionals meticulously reviews every single document and transaction, ensuring absolute precision and compliance with the latest tax laws. Your financial well-being is our top priority, and we are committed to providing solutions that are not just accurate, but also tailored to your unique needs, helping you save and optimize your taxes effectively.
-                </p>
-            </div>
-        </section>
+		<section class="testimonials">
+			<div class="container">
+				<h2>What Our Clients Say</h2>
+				
+<div class="testimonial-wrapper">
+    <div class="reviews-container">
+        <div class="testimonial-quotes">
+            <blockquote>
+                "Trisharya Finance made understanding my investment options so easy. I feel confident about my financial future now."
+                <cite>— Rohit S., Mumbai</cite>
+            </blockquote>
+            <blockquote>
+                "The team provided clear, unbiased advice on my insurance needs. I highly recommend their professional service."
+                <cite>— Anjali P., Pune</cite>
+            </blockquote>
+            <blockquote>
+                "I started my SIP with Trisharya and the advice has been fantastic. My portfolio has grown steadily."
+                <cite>— Prakash G., Bangalore</cite>
+            </blockquote>
+            <blockquote>
+                "Excellent service and support. They helped me find the perfect health insurance plan for my family."
+                <cite>— Deepa R., Chennai</cite>
+            </blockquote>
+            <blockquote>
+                "Trustworthy and reliable. The financial planning session was a great help for me and my husband."
+                <cite>— Alok V., Delhi</cite>
+            </blockquote>
+            <blockquote>
+                "They simplify complex financial products. I'm glad I chose them for my investment needs."
+                <cite>— Kavita L., Hyderabad</cite>
+            </blockquote>
+        </div>
+        <button id="scrollLeft" class="scroll-btn left-btn"><i class="fas fa-chevron-left"></i></button>
+        <button id="scrollRight" class="scroll-btn right-btn"><i class="fas fa-chevron-right"></i></button>
+    </div>
+</div>
 
-        <!-- Contact Section -->
-        <section id="contact" class="py-16 px-4 bg-gray-50">
-            <div class="container mx-auto">
-                <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Get in Touch</h2>
-                <div class="flex flex-col lg:flex-row gap-12 items-center justify-center">
-                    <!-- Enhanced Contact Information -->
-                    <div class="bg-white p-8 rounded-xl shadow-lg w-full max-w-xl text-center">
-                        <h3 class="text-2xl font-semibold text-gray-900 mb-6">Reach Out to Our Experts</h3>
-                        <p class="text-lg text-gray-700 mb-8">
-                            We're here to help you with all your tax and financial optimization needs. Contact us directly using the options below:
-                        </p>
-                        <div class="space-y-6">
-                            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                                <a href="tel:+918767804623" class="flex items-center justify-center bg-indigo-600 text-white font-bold py-3 px-6 rounded-full shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition duration-300 ease-in-out transform hover:scale-105 w-full sm:w-auto">
-                                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M14.472 8.36a3 3 0 00-4.004-4.004l-7.796 7.796a3 3 0 00-4.004 4.004l7.796 7.796a3 3 0 004.004-4.004l-7.796-7.796zm-4.95-4.95l-.707-.707-2.828 2.828.707.707L9.522 3.41zM10 0a1 1 0 011 1v2a1 1 0 11-2 0V1a1 1 0 011-1zm6 10a1 1 0 011-1h2a1 1 0 110 2h-2a1 1 0 01-1-1zM2 10a1 1 0 01-1 1H0a1 1 0 110-2h1a1 1 0 011 1zm8 6a1 1 0 01-1 1v2a1 1 0 112 0v-2a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-                                    Call Us: 8767804623
-                                </a>
-                                <a href="https://wa.me/918767804623" target="_blank" class="flex items-center justify-center bg-green-500 text-white font-bold py-3 px-6 rounded-full shadow-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 transition duration-300 ease-in-out transform hover:scale-105 w-full sm:w-auto">
-                                    <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.44 1.34 4.96L2 22l5.24-1.39c1.45.79 3.08 1.25 4.79 1.25 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.72 13.06c-.11.19-.4.29-.69.37-.26.07-.63.12-.89.05-.28-.08-.63-.22-.96-.45-.33-.23-.78-.56-1.1-1.02-.34-.45-.6-.9-1.05-1.47-.45-.58-.93-1.0-1.4-.49-.47.51-1.42 1.22-1.74 1.48-.32.25-.62.29-.9.23-.29-.07-.7-.25-.99-.34-.29-.09-.59-.19-.89-.47-.3-.29-1.05-1-1.05-1.92s.45-1.35.61-1.59c.16-.23.33-.28.5-.31.17-.03.35-.02.53.03.18.05.39-.06.51.27.12.33.22.8.34 1.15.12.35.24.5.4.67.16.17.34.25.5.25.16 0 .4-.06.53-.08.13-.03.88-.33 1.01-.73.13-.4.07-.73-.02-.85-.09-.12-.23-.2-.36-.31-.13-.12-.27-.26-.34-.4-.07-.13-.02-.25.04-.37.06-.12.4-.96.56-1.33.16-.37.33-.31.5-.31.17 0 .34 0 .52.01.18.01.27.01.49.52.22.51.78 1.77.89 1.95.11.19.1 1.05-.25 1.55zM12.04 4c4.37 0 7.91 3.54 7.91 7.91 0 1.39-.36 2.72-1.04 3.9L16.5 17.5l.5 1.5-1.5-.5-.95-.29c-1.06.66-2.3.99-3.55.99-4.37 0-7.91-3.54-7.91-7.91S7.67 4 12.04 4z"></path></svg>
-                                    WhatsApp Us: 8767804623
-                                </a>
-                            </div>
-                            <a href="mailto:tax2submit@gmail.com" class="flex items-center justify-center bg-gray-200 text-indigo-700 font-bold py-3 px-6 rounded-full shadow-md hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 transition duration-300 ease-in-out transform hover:scale-105 w-full sm:w-auto mx-auto">
-                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
-                                Email Us: tax2submit@gmail.com
-                            </a>
-                        </div>
-                    </div>
+			</div>
+		</section>
+        <section class="blog-preview">
+            <div class="container">
+                <h2>Latest Insights</h2>
+                <div class="blog-posts">
+                    <article>
+                        <h3>Understanding Your Taxes and ELSS</h3>
+                        <p>Explore how investing in Equity-Linked Savings Schemes can help you save on your taxes while building long-term wealth...</p>
+                        <a href="https://taxsubmission.blogspot.com" target="_blank" class="read-more">Read More</a>
+                    </article>
+                    <article>
+                        <h3>Why a Term Plan is a Must-Have</h3>
+                        <p>Learn the fundamental benefits of a term insurance plan and why it's a critical component for family protection...</p>
+                        <a href="https://taxsubmission.blogspot.com" target="_blank" class="read-more">Read More</a>
+                    </article>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8 px-4 mt-12 rounded-t-xl">
-        <div class="container mx-auto text-center text-sm">
-            <p>&copy; 2025 TaxSubmission.com. All rights reserved.</p>
-            <p class="mt-2">Dedicated to accuracy and your financial peace of mind.</p>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Trisharya Finance. All Rights Reserved.</p>
         </div>
     </footer>
 
+    <script src="scripts.js"></script>
 </body>
 </html>

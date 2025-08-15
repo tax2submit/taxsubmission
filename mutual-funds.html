@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mutual Funds | Trisharya Finance</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="assets/logo-placeholder.png" alt="Trisharya Finance Logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="mutual-funds.html" class="active">Mutual Funds</a></li>
+                    <li><a href="insurance.html">Insurance</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1>Mutual Funds</h1>
+                <p>Invest for a better tomorrow.</p>
+            </div>
+        </section>
+
+        <section class="service-details">
+            <div class="container">
+                <h2>Our Mutual Fund Offerings</h2>
+                <p>We provide a comprehensive range of mutual fund options to suit every risk profile and financial goal, whether you are a new investor or an experienced one.</p>
+                <div class="service-grid">
+                    <div class="service-item">
+                        <h3>Equity Funds</h3>
+                        <p>Invest in stocks for long-term wealth creation. Ideal for investors with a high-risk appetite.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Debt Funds</h3>
+                        <p>Stability and regular income from corporate bonds and government securities. A low-risk option for conservative investors.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Hybrid Funds</h3>
+                        <p>A balanced mix of equity and debt to provide both growth potential and stability.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>ELSS (Tax Saving) Funds</h3>
+                        <p>Invest to save tax under Section 80C while building long-term wealth with a lock-in period of 3 years.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>SIP (Systematic Investment Plan)</h3>
+                        <p>Start investing with as little as ₹500 per month. The disciplined approach to investing allows you to benefit from compounding and rupee-cost averaging.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="calculator-section">
+            <div class="container">
+                <h2>SIP Calculator</h2>
+                <p>Estimate the potential returns on your Systematic Investment Plan.</p>
+                <div class="calculator-form">
+                    <label for="sipAmount">Monthly SIP Amount (₹)</label>
+                    <input type="number" id="sipAmount" value="5000">
+
+                    <label for="expectedRate">Expected Annual Return (%)</label>
+                    <input type="number" id="expectedRate" value="12">
+
+                    <label for="timePeriod">Investment Period (Years)</label>
+                    <input type="number" id="timePeriod" value="10">
+                </div>
+                <button onclick="calculateSIP()" class="btn primary-btn">Calculate</button>
+                <div id="sipResult" class="result-box">
+                    <p>Total Investment: ₹<span id="investedAmount">0</span></p>
+                    <p>Estimated Returns: ₹<span id="estimatedReturns">0</span></p>
+                    <p>Total Value: ₹<span id="totalValue">0</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="container">
+                <h2>Mutual Fund FAQs</h2>
+                <div class="faq-accordion">
+                    <div class="faq-item">
+                        <div class="faq-question">What is a Mutual Fund?</div>
+                        <div class="faq-answer">A mutual fund is a professionally managed investment fund that pools money from many investors to purchase securities like stocks, bonds, money market instruments, and other assets.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Are Mutual Funds Safe?</div>
+                        <div class="faq-answer">Mutual fund investments are subject to market risks. However, they are regulated by SEBI, and professional fund managers work to minimize risks by diversifying the portfolio.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Trisharya Finance. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
