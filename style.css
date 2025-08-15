@@ -405,24 +405,6 @@ header nav ul li a.active {
 }
 
 /* --- Contact Page --- */
-.contact-item a {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-    padding: 2rem;
-    box-sizing: border-box;
-}
-
-.contact-item a:hover {
-    color: var(--white);
-}
-
-.contact-item:hover h3,
-.contact-item:hover p {
-    color: var(--white);
-    font-weight: 600;
-}
-
 .contact-details {
     text-align: center;
     padding: 40px 0;
@@ -444,10 +426,16 @@ header nav ul li a.active {
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s ease-in-out;
 }
 
-.contact-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    background: var(--navy);
+.contact-item a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.contact-item a:hover {
+    color: var(--white);
 }
 
 .contact-item h3 {
@@ -459,9 +447,16 @@ header nav ul li a.active {
     transition: color 0.3s ease-in-out;
 }
 
+.contact-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background: var(--navy);
+}
+
 .contact-item:hover h3,
 .contact-item:hover p {
     color: var(--white);
+    font-weight: 600;
 }
 
 .small-text {
@@ -507,4 +502,71 @@ footer {
     text-align: center;
     padding: 20px 0;
     margin-top: 30px;
+}
+
+/* --- Mobile-Specific Styles (for screens up to 768px wide) --- */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    /* Header & Nav */
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+    header nav ul li {
+        margin: 0.5rem 0;
+    }
+    
+    /* Hero */
+    .hero, .page-hero, .about-hero {
+        padding: 50px 0;
+    }
+
+    .hero h1, .page-hero h1, .about-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    /* Multi-column Sections */
+    .service-cards, 
+    .values-list, 
+    .contact-methods {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .testimonial-quotes,
+    .blog-posts {
+        flex-direction: column;
+        gap: 20px;
+        overflow-x: auto;
+    }
+
+    .testimonial-quotes blockquote {
+        flex: 0 0 100%;
+        min-width: 100%;
+        margin-right: 20px;
+    }
+
+    .blog-posts article {
+        flex: 0 0 100%;
+    }
+    
+    /* Buttons for scrolling on mobile */
+    .reviews-container {
+        padding: 0;
+    }
+    
+    .scroll-btn {
+        display: none;
+    }
+    
 }
