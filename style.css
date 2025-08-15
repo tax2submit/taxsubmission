@@ -22,7 +22,7 @@ body {
     padding: 0 2rem;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     font-family: 'Poppins', sans-serif;
     color: var(--navy);
 }
@@ -230,20 +230,13 @@ header nav ul li a.active {
     justify-content: flex-start;
     gap: 2rem;
     margin-top: 2rem;
-    overflow-x: scroll;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
-
-.testimonial-quotes::-webkit-scrollbar {
-    display: none;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
 }
 
 .testimonial-quotes blockquote {
-    flex: 0 0 calc(33.33% - 1.33rem);
-    min-width: 300px;
+    flex: 0 0 100%;
+    min-width: 100%;
     font-style: italic;
     font-size: 1.1rem;
     line-height: 1.8;
@@ -251,6 +244,8 @@ header nav ul li a.active {
     padding: 1.5rem;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 8px;
+    scroll-snap-align: start;
+    margin-right: 2rem; /* Add margin for spacing between reviews */
 }
 
 .testimonial-quotes cite {
@@ -372,7 +367,7 @@ header nav ul li a.active {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.value-item h3,
+.value-item h4,
 .value-item p,
 .value-item i {
     transition: color 0.3s ease-in-out;
@@ -411,9 +406,11 @@ header nav ul li a.active {
     max-width: 400px;
 }
 
+/* Change the color of all labels in the calculator form */
 .calculator-form label {
     align-self: flex-start;
     font-weight: 600;
+    color: var(--white);
 }
 
 form input, form textarea {
@@ -428,6 +425,12 @@ form input, form textarea {
     background: rgba(255, 255, 255, 0.1);
     padding: 20px;
     border-radius: 8px;
+}
+
+/* This is the key change for the result box */
+.result-box p,
+.result-box span {
+    color: var(--white);
 }
 
 .result-box p {
@@ -524,7 +527,7 @@ form input, form textarea {
 
 .contact-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
     background: var(--navy);
 }
 

@@ -58,23 +58,25 @@
             </div>
         </section>
 
-        <section class="calculator-section">
-            <div class="container">
-                <h2>Insurance Coverage Estimator</h2>
-                <p>Use our simple tool to get a rough idea of the ideal insurance coverage you might need.</p>
-                <div class="calculator-form">
-                    <label for="annualIncome">Your Annual Income (₹)</label>
-                    <input type="number" id="annualIncome" value="500000">
 
-                    <label for="dependents">Number of Dependents</label>
-                    <input type="number" id="dependents" value="3">
-                </div>
-                <button onclick="calculateInsurance()" class="btn primary-btn">Estimate Coverage</button>
-                <div id="insuranceResult" class="result-box">
-                    <p>Estimated Coverage Needed: ₹<span id="estimatedCoverage">0</span></p>
-                </div>
-            </div>
-        </section>
+		<section class="calculator-section insurance-calculator">
+			<div class="container">
+				<h2>Insurance Coverage Estimator</h2>
+				<p>Get a quick estimate of the life insurance coverage you may need.</p>
+				<form class="calculator-form">
+					<label for="annualIncome">Annual Income (₹)</label>
+					<input type="number" id="annualIncome" required>
+
+					<label for="dependents">Number of Dependents</label>
+					<input type="number" id="dependents" required>
+
+					<button type="submit" class="btn primary-btn">Estimate</button>
+				</form>
+				<div class="result-box">
+					<p>Estimated Coverage Needed: ₹<span id="estimatedCoverage">0</span></p>
+				</div>
+			</div>
+		</section>
 
         <section class="faq-section">
             <div class="container">

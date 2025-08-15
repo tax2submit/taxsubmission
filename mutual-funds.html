@@ -62,28 +62,29 @@
             </div>
         </section>
 
-        <section class="calculator-section">
-            <div class="container">
-                <h2>SIP Calculator</h2>
-                <p>Estimate the potential returns on your Systematic Investment Plan.</p>
-                <div class="calculator-form">
-                    <label for="sipAmount">Monthly SIP Amount (₹)</label>
-                    <input type="number" id="sipAmount" value="5000">
+		<section class="calculator-section sip-calculator">
+			<div class="container">
+				<h2>SIP Calculator</h2>
+				<p>Estimate the potential returns on your SIP investments over time.</p>
+				<form class="calculator-form">
+					<label for="sipAmount">Monthly Investment (₹)</label>
+					<input type="number" id="sipAmount" required>
 
-                    <label for="expectedRate">Expected Annual Return (%)</label>
-                    <input type="number" id="expectedRate" value="12">
+					<label for="expectedRate">Expected Annual Return (%)</label>
+					<input type="number" id="expectedRate" step="0.1" required>
 
-                    <label for="timePeriod">Investment Period (Years)</label>
-                    <input type="number" id="timePeriod" value="10">
-                </div>
-                <button onclick="calculateSIP()" class="btn primary-btn">Calculate</button>
-                <div id="sipResult" class="result-box">
-                    <p>Total Investment: ₹<span id="investedAmount">0</span></p>
-                    <p>Estimated Returns: ₹<span id="estimatedReturns">0</span></p>
-                    <p>Total Value: ₹<span id="totalValue">0</span></p>
-                </div>
-            </div>
-        </section>
+					<label for="timePeriod">Time Period (Years)</label>
+					<input type="number" id="timePeriod" required>
+
+					<button type="submit" class="btn primary-btn">Calculate</button>
+				</form>
+				<div class="result-box">
+					<p>Total Amount Invested: ₹<span id="investedAmount">0</span></p>
+					<p>Estimated Returns: ₹<span id="estimatedReturns">0</span></p>
+					<p>Total Value: ₹<span id="totalValue">0</span></p>
+				</div>
+			</div>
+		</section>
 
         <section class="faq-section">
             <div class="container">

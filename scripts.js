@@ -1,74 +1,92 @@
-// --- SIP Calculator Function ---
-function calculateSIP() {
-    const sipAmount = parseFloat(document.getElementById('sipAmount').value);
-    const expectedRate = parseFloat(document.getElementById('expectedRate').value) / 100 / 12;
-    const timePeriod = parseFloat(document.getElementById('timePeriod').value) * 12;
+document.addEventListener('DOMContentLoaded', function() {
 
-    if (isNaN(sipAmount) || isNaN(expectedRate) || isNaN(timePeriod)) {
-        alert("Please enter valid numbers for all fields.");
-        return;
+    // --- Mobile Menu Functionality ---
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mainNav = document.querySelector('.main-nav');
+
+    if (menuToggle && mainNav) {
+        menuToggle.addEventListener('click', function() {
+            mainNav.classList.toggle('active');
+        });
     }
 
-    const futureValue = sipAmount * ((Math.pow((1 + expectedRate), timePeriod) - 1) / expectedRate) * (1 + expectedRate);
-    const totalInvested = sipAmount * timePeriod;
-    const estimatedReturns = futureValue - totalInvested;
-
-    document.getElementById('investedAmount').textContent = Math.round(totalInvested).toLocaleString('en-IN');
-    document.getElementById('estimatedReturns').textContent = Math.round(estimatedReturns).toLocaleString('en-IN');
-    document.getElementById('totalValue').textContent = Math.round(futureValue).toLocaleString('en-IN');
-}
-
-// --- Insurance Coverage Estimator Function ---
-function calculateInsurance() {
-    const annualIncome = parseFloat(document.getElementById('annualIncome').value);
-    const dependents = parseFloat(document.getElementById('dependents').value);
-
-    if (isNaN(annualIncome) || isNaN(dependents)) {
-        alert("Please enter valid numbers for all fields.");
-        return;
-    }
-
-    // A common thumb rule is 10-15 times annual income, plus a fixed amount per dependent.
-    const baseCoverage = annualIncome * 12;
-    const dependentCoverage = dependents * 500000;
-    const estimatedCoverage = baseCoverage + dependentCoverage;
-
-    document.getElementById('estimatedCoverage').textContent = Math.round(estimatedCoverage).toLocaleString('en-IN');
-}
-
-// --- FAQ Accordion Functionality ---
-document.addEventListener('DOMContentLoaded', () => {
+    // --- FAQ Accordion Functionality ---
     const faqItems = document.querySelectorAll('.faq-item');
     faqItems.forEach(item => {
         item.addEventListener('click', () => {
             item.classList.toggle('active');
         });
     });
-});
 
-document.addEventListener('DOMContentLoaded', () => {
-    // Other event listeners are here...
+    // --- SIP Calculator Function ---
+    const calculateSIPButton = document.querySelector('.sip-calculator .btn');
+    if (calculateSIPButton) {
+        calculateSIPButton.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevents the form from refreshing the page
 
-    // Testimonial Scroll functionality
-    const testimonialContainer = document.querySelector('.testimonial-quotes');
-    const scrollLeftBtn = document.getElementById('scrollLeft');
-    const scrollRightBtn = document.getElementById('scrollRight');
+            const sipAmount = parseFloat(document.getElementById('sipAmount').value);
+            const expectedRate = parseFloat(document.getElementById('expectedRate').value) / 100 / 12;
+            const timePeriod = parseFloat(document.getElementById('timePeriod').value) * 12;
 
-    const scrollAmount = 350; // Adjust this value to change scroll distance
+            if (isNaN(sipAmount) || isNaN(expectedRate) || isNaN(timePeriod)) {
+                alert("Please enter valid numbers for all fields.");
+                return;
+            }
 
-    if (scrollLeftBtn && scrollRightBtn && testimonialContainer) {
-        scrollLeftBtn.addEventListener('click', () => {
-            testimonialContainer.scrollBy({
-                left: -scrollAmount,
-                behavior: 'smooth'
-            });
-        });
+            const futureValue = sipAmount * ((Math.pow((1 + expectedRate), timePeriod) - 1) / expectedRate) * (1 + expectedRate);
+            const totalInvested = sipAmount * timePeriod;
+            const estimatedReturns = futureValue - totalInvested;
 
-        scrollRightBtn.addEventListener('click', () => {
-            testimonialContainer.scrollBy({
-                left: scrollAmount,
-                behavior: 'smooth'
-            });
+            document.getElementById('investedAmount').textContent = Math.round(totalInvested).toLocaleString('en-IN');
+            document.getElementById('estimatedReturns').textContent = Math.round(estimatedReturns).toLocaleString('en-IN');
+            document.getElementById('totalValue').textContent = Math.round(futureValue).toLocaleString('en-IN');
         });
     }
+
+    // --- Insurance Coverage Estimator Function ---
+    const calculateInsuranceButton = document.querySelector('.insurance-calculator .btn');
+    if (calculateInsuranceButton) {
+        calculateInsuranceButton.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevents the form from refreshing the page
+
+            const annualIncome = parseFloat(document.getElementById('annualIncome').value);
+            const dependents = parseFloat(document.getElementById('dependents').value);
+
+            if (isNaN(annualIncome) || isNaN(dependents)) {
+                alert("Please enter valid numbers for all fields.");
+                return;
+            }
+
+            const baseCoverage = annualIncome * 12;
+            const dependentCoverage = dependents * 500000;
+            const estimatedCoverage = baseCoverage + dependentCoverage;
+
+            document.getElementById('estimatedCoverage').textContent = Math.round(estimatedCoverage).toLocaleString('en-IN');
+        });
+    }
+    
+    // Testimonial Carousel functionality
+    const reviewsContainer = document.querySelector('.testimonial-quotes');
+    const leftBtn = document.querySelector('.left-btn');
+    const rightBtn = document.querySelector('.right-btn');
+    const reviews = document.querySelectorAll('.testimonial-quotes blockquote');
+
+    if (reviewsContainer && leftBtn && rightBtn && reviews.length > 0) {
+        let currentReviewIndex = 0;
+
+        function scrollToReview(index) {
+            reviewsContainer.scrollLeft = reviews[index].offsetLeft - reviewsContainer.offsetLeft;
+        }
+
+        leftBtn.addEventListener('click', () => {
+            currentReviewIndex = (currentReviewIndex > 0) ? currentReviewIndex - 1 : reviews.length - 1;
+            scrollToReview(currentReviewIndex);
+        });
+
+        rightBtn.addEventListener('click', () => {
+            currentReviewIndex = (currentReviewIndex < reviews.length - 1) ? currentReviewIndex + 1 : 0;
+            scrollToReview(currentReviewIndex);
+        });
+    }
+
 });
