@@ -62,6 +62,8 @@ header {
     background: var(--white);
     padding: 1rem 0;
     border-bottom: 3px solid var(--gold);
+    position: relative;
+    z-index: 1000;
 }
 
 header .container {
@@ -95,6 +97,16 @@ header nav ul li a {
 header nav ul li a:hover,
 header nav ul li a.active {
     color: var(--gold);
+}
+
+/* Menu button (hidden by default) */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--navy);
+    cursor: pointer;
 }
 
 /* --- Hero Section --- */
@@ -134,13 +146,25 @@ header nav ul li a.active {
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s ease-in-out;
     text-align: center;
     flex: 1;
 }
 
+.service-cards .card h3,
+.service-cards .card p {
+    transition: color 0.3s ease-in-out;
+}
+
 .service-cards .card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
+    background: var(--navy);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service-cards .card:hover h3,
+.service-cards .card:hover p {
+    color: var(--white);
 }
 
 .service-cards .card img {
@@ -160,6 +184,23 @@ header nav ul li a.active {
     background: var(--gray);
     padding: 1.5rem;
     border-radius: 8px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.service-item h3,
+.service-item p {
+    transition: color 0.3s ease-in-out;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    background: var(--navy);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service-item:hover h3,
+.service-item:hover p {
+    color: var(--white);
 }
 
 /* --- Testimonials --- */
@@ -267,6 +308,29 @@ header nav ul li a.active {
     text-align: left;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     flex: 1;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+.blog-posts article a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.blog-posts article h3,
+.blog-posts article p {
+    transition: color 0.3s ease-in-out;
+}
+
+.blog-posts article:hover {
+    transform: translateY(-5px);
+    background: var(--navy);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.blog-posts article:hover h3,
+.blog-posts article:hover p {
+    color: var(--white);
 }
 
 .blog-posts h3 {
@@ -304,13 +368,26 @@ header nav ul li a.active {
     padding: 1.5rem;
     border-radius: 8px;
     flex: 1;
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s ease-in-out;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.value-item h3,
+.value-item p,
+.value-item i {
+    transition: color 0.3s ease-in-out;
+}
+
 .value-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    background: var(--navy);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.value-item:hover h4,
+.value-item:hover p,
+.value-item:hover i {
+    color: var(--white);
 }
 
 /* --- Calculators --- */
@@ -339,13 +416,11 @@ header nav ul li a.active {
     font-weight: 600;
 }
 
-.calculator-form input {
-    width: 100%;
+form input, form textarea {
     padding: 10px;
-    border: none;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    background: var(--white);
-    color: var(--navy);
 }
 
 .result-box {
@@ -512,20 +587,44 @@ footer {
 
     /* Header & Nav */
     header .container {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: row;
+        text-align: left;
+        align-items: center;
+    }
+    
+    header .main-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--navy);
+        padding: 1rem 0;
+        box-shadow: 0 4px 5px rgba(0,0,0,0.1);
+    }
+    
+    header .main-nav.active {
+        display: block;
     }
     
     header nav ul {
         flex-direction: column;
         align-items: center;
-        margin-top: 1rem;
     }
 
     header nav ul li {
         margin: 0.5rem 0;
     }
     
+    header nav ul li a {
+        color: var(--white);
+        font-size: 1.2rem;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
     /* Hero */
     .hero, .page-hero, .about-hero {
         padding: 50px 0;
